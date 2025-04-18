@@ -32,6 +32,7 @@ export default function App() {
       achievements: [
         "Developing a Jira Forge App for generating detailed reports on engineers' tasks. The app also features an interactive stand-up meeting tool, allowing teams to log daily updates and blockers.",
       ],
+      skills: ["React", "Forge", "AWS Lambda", "Postgres"],
     },
     {
       jobTitle: "Software Engineering Intern",
@@ -43,21 +44,20 @@ export default function App() {
         "Implemented a real time doppler sync, enabling restart of services on change in stored environment variables on doppler.",
         "Developed a Golang SDK to expose various APIs, significantly enhancing the accessibility and usability of our services.",
       ],
+      skills: ["Golang", "NodeJS"],
     },
   ];
 
   const personalProjects = [
     {
       name: "Portfolio",
-      description:
-        "A personal portfolio website showcasing my skills, projects, and work experience. Built with React and Tailwind CSS.",
+      description: `A personal portfolio website showcasing my skills, projects, and work experience. Built with <span class="text-black font-bold">React</span> and <span class="text-black font-bold">Tailwind CSS</span>.`,
       githubUrl: "https://github.com/OdunlamiZO/portfolio-revamp",
-      liveUrl: "",
+      liveUrl: "https://odunlamizo.netlify.app/",
     },
     {
       name: "Zone Clock",
-      description:
-        "A web-based application that provides users with the current time for multiple time zones, offering a convenient way to track global time differences. This was created with vanilla JS.",
+      description: `A web-based application that provides users with the current time for multiple time zones, offering a convenient way to track global time differences. This was created with <span class="text-black font-bold" >vanilla JS</span>.`,
       githubUrl: "https://github.com/OdunlamiZO/zone-clock",
       liveUrl: "https://odunlamizo.github.io/zone-clock/",
     },
@@ -133,10 +133,10 @@ export default function App() {
             <img
               src="/images/portfolio_DP.jpeg"
               alt="Portfolio DP"
-              className="w-56 h-auto rounded-full object-cover"
+              className="w-48 md:w-52 lg:w-60 h-auto rounded-full object-cover"
             />
           </div>
-          <h1 className="text-3xl text-center orbitron-medium">
+          <h1 className="text-2xl lg:text-3xl text-center orbitron-medium">
             HEY, I'M ZACCHAEUS ODUNLAMI
           </h1>
           <p className="text-justify">
@@ -162,6 +162,7 @@ export default function App() {
                 startDate={experience.startDate}
                 endDate={experience.endDate}
                 achievements={experience.achievements}
+                skills={experience.skills}
               />
             ))}
           </div>
@@ -192,8 +193,11 @@ export default function App() {
             . A school management system that will help schools manage their
             students and teachers. The system will have features like attendance
             management, grading system, and lots more. This project is being
-            built with Java Spring Boot and VueJS. If you are interested in
-            contributing to this project, please reach out to me.
+            built with&nbsp;
+            <span className="text-black font-bold">Java Spring Boot&nbsp;</span>
+            and&nbsp;
+            <span className="text-black font-bold">VueJS</span>. If you are
+            interested in contributing to this project, you can reach out to me.
             <br />
           </p>
         </div>

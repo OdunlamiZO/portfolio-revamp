@@ -8,8 +8,11 @@ export default function PersonalProject(props: {
 
   return (
     <div className="flex flex-col gap-2">
-      <h2 className="black">{name}</h2>
-      <p className="text-justify">{description}</p>
+      <h2 className="text-black">{name}</h2>
+      <p
+        className="text-justify"
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
       <div className="flex justify-end gap-4">
         <a href={githubUrl} className="underline">
           GitHub

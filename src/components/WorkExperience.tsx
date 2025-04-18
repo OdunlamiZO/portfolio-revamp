@@ -5,13 +5,21 @@ export default function WorkExperience(props: {
   startDate: string;
   endDate: string;
   achievements?: string[];
+  skills: string[];
 }) {
-  const { jobTitle, company, companyUrl, startDate, endDate, achievements } =
-    props;
+  const {
+    jobTitle,
+    company,
+    companyUrl,
+    startDate,
+    endDate,
+    achievements,
+    skills,
+  } = props;
 
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex flex-col md:flex-row justify-between black">
+      <div className="flex flex-col md:flex-row justify-between text-black">
         <span>
           {jobTitle}&nbsp;@&nbsp;
           <a href={companyUrl} className="hover:underline">
@@ -29,6 +37,7 @@ export default function WorkExperience(props: {
           ))}
         </ul>
       )}
+      <div className="text-black font-bold">{skills?.join(", ")}</div>
     </div>
   );
 }
