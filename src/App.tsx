@@ -106,7 +106,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="p-6 flex flex-col items-center orbitron-regular text-base text-gray-700 leading-relaxed">
+    <div className="pt-6 px-6 flex flex-col items-center orbitron-regular text-base text-gray-600 leading-relaxed">
       <header className="w-full flex items-center justify-between">
         <div className="text-xl font-bold overflow-hidden whitespace-nowrap border-r-2 animate-typingBlink">
           OdunlamiZO
@@ -124,17 +124,19 @@ export default function App() {
       </header>
 
       <main
-        className={`${isTypingDone ? "animate-fadeIn" : "opacity-0"} w-2/3`}
+        className={`${
+          isTypingDone ? "animate-fadeIn" : "opacity-0"
+        } lg:w-2/3 w-full`}
       >
-        <div className="pt-16 flex flex-col items-center gap-4">
+        <div className="pt-16 flex flex-col items-center justify-center gap-4">
           <div className="pb-4">
             <img
               src="/images/portfolio_DP.jpeg"
               alt="Portfolio DP"
-              className="w-52 h-auto rounded-full object-cover"
+              className="w-56 h-auto rounded-full object-cover"
             />
           </div>
-          <h1 className="text-3xl orbitron-medium">
+          <h1 className="text-3xl text-center orbitron-medium">
             HEY, I'M ZACCHAEUS ODUNLAMI
           </h1>
           <p className="text-justify">
@@ -181,6 +183,22 @@ export default function App() {
         </div>
 
         <div className="pt-8">
+          <h1 className="text-xl orbitron-medium">What Am I Up To?</h1>
+          <p className="pt-4 text-justify">
+            Currently, I am building something interesting with&nbsp;
+            <a href="https://github.com/Sammy-OD" className="underline">
+              Samuel Odunlami
+            </a>
+            . A school management system that will help schools manage their
+            students and teachers. The system will have features like attendance
+            management, grading system, and lots more. This project is being
+            built with Java Spring Boot and VueJS. If you are interested in
+            contributing to this project, please reach out to me.
+            <br />
+          </p>
+        </div>
+
+        <div className="py-8">
           <form
             className="p-4 border border-gray-300 rounded-lg"
             onSubmit={handleSubmit}
@@ -199,6 +217,7 @@ export default function App() {
                 className="mt-2 p-2 w-full border border-gray-300 rounded-lg"
               />
             </div>
+
             <div className="pt-4">
               <label htmlFor="email" className="block">
                 Email
@@ -211,6 +230,7 @@ export default function App() {
                 className="mt-2 p-2 w-full border border-gray-300 rounded-lg"
               />
             </div>
+
             <div className="pt-4">
               <label htmlFor="message" className="block">
                 Message
@@ -223,6 +243,7 @@ export default function App() {
                 rows={4}
               />
             </div>
+
             <div className="pt-4 flex justify-end">
               <button
                 type="submit"
@@ -234,6 +255,10 @@ export default function App() {
           </form>
         </div>
       </main>
+
+      <footer className="w-full h-24 text-sm flex justify-center items-center">
+        @2024 Zacchaeus Odunlami. All rights reserved.
+      </footer>
 
       <ToastContainer />
     </div>

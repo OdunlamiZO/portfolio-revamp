@@ -11,10 +11,9 @@ export default function WorkExperience(props: {
 
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex justify-between text-gray-900">
-        <span className="flex gap-2">
-          <span>{jobTitle}</span>
-          <span>@</span>
+      <div className="flex flex-col md:flex-row justify-between black">
+        <span>
+          {jobTitle}&nbsp;@&nbsp;
           <a href={companyUrl} className="hover:underline">
             {company}
           </a>
@@ -24,7 +23,7 @@ export default function WorkExperience(props: {
       {achievements && (
         <ul className="list-disc pl-5 space-y-2">
           {achievements.map((achievement, index) => (
-            <li key={index} className="text-sm text-justify">
+            <li key={index} className="text-justify">
               {achievement}
             </li>
           ))}

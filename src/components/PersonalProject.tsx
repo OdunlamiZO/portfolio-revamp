@@ -8,11 +8,17 @@ export default function PersonalProject(props: {
 
   return (
     <div className="flex flex-col gap-2">
-      <h2 className="text-gray-900">{name}</h2>
-      <p className="text-sm text-justify">{description}</p>
+      <h2 className="black">{name}</h2>
+      <p className="text-justify">{description}</p>
       <div className="flex justify-end gap-4">
-        <a href={githubUrl}>GitHub</a>
-        {liveUrl && <a href={liveUrl}>Visit Site</a>}
+        <a href={githubUrl} className="underline">
+          GitHub
+        </a>
+        {liveUrl && (
+          <a href={liveUrl} className="underline">
+            Visit Site
+          </a>
+        )}
       </div>
     </div>
   );
