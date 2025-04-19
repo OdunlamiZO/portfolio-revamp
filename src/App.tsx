@@ -50,6 +50,12 @@ export default function App() {
 
   const personalProjects = [
     {
+      name: "Java Paystack",
+      description:
+        "Developed a comprehensive Java SDK for integrating with the Paystack API, designed to simplify the integration of payment gateway features in Java-based applications.",
+      githubUrl: "https://github.com/OdunlamiZO/java-paystack",
+    },
+    {
       name: "Portfolio",
       description: `A personal portfolio website showcasing my skills, projects, and work experience. Built with <span class="text-black font-bold">React</span> and <span class="text-black font-bold">Tailwind CSS</span>.`,
       githubUrl: "https://github.com/OdunlamiZO/portfolio-revamp",
